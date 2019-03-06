@@ -54,7 +54,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font-family: helvetica, arial, sans;
+  font-family: 'Raleway', helvetica, arial, sans;
   min-height: 100vh;
 }
 h1 {
@@ -106,7 +106,7 @@ h2 ~ p {
 }
 .header-logo:hover,
 .header-logo:active {
-  background-color: #ed6e2f;
+  background-color: #787896;
 }
 .header-logo img {
   width: 8vh;
@@ -135,11 +135,11 @@ h2 ~ p {
 }
 .nav-links a:hover,
 .nav-links a:active  {
-  color: #ed6e2f;
+  color: #787896;
 }
-.header-nav > li:first-child a {
-  color: #ed6e2f;
-}
+/* .header-nav > li:first-child a {
+  color: #787896;
+} */
 /* .header-nav > li:first-child a:hover {
   color: #fff;
 } */
@@ -268,6 +268,30 @@ h2 ~ p {
   flex-basis: 45em;
   padding: 0 3vw;
   font-size: 0.8rem;
+}
+
+/* SPECTRUM STYLES */
+.spectrum-diagram {
+  display: flex;
+  align-items: center;
+}
+.diagram-title {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.col {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 2em;
+  text-align: center;
+}
+.col-two, .col-three {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* BIO STYLES */
