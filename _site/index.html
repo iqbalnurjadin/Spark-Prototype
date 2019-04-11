@@ -6,6 +6,13 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/gallery.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      setNone();
+      activateGallery();
+    });
+  </script>
 </head>
 
   <body>
@@ -14,8 +21,8 @@
     <ul class="header-nav nav-links">
       <li><a href="/">Home</a></li>
 <li><a href="/spectrum">The Spectrum</a></li>
-<li><a href="">About Us</a></li>
-<li><a href="">Contact</a></li>
+<li><a href="/learnmore">Learn More</a></li>
+<li><a href="/about">About Us</a></li>
 
     </ul>
   </nav>
@@ -28,18 +35,8 @@
     <div class="content-container">
       <div class="full-hero hero-home">
   <div class="hero-content">
-    <h1>SPARK RESOURCE PLATFORM</h1>
-    <!-- <ul class="social-list">
-      <li>
-        <a href="http://example.com/" class="social-link">Fb</a>
-      </li>
-      <li>
-        <a href="http://example.com/" class="social-link">Tw</a>
-      </li>
-      <li>
-        <a href="http://example.com/" class="social-link">Gh</a>
-      </li>
-    </ul> -->
+    <h1>THE SPARK PLATFORM</h1>
+    <h2>A tool for students & young professionals to learn about impact-driven career opportunities & social entrepreneurship</h2>
   </div>
 </div>
 
@@ -47,56 +44,36 @@
   <h1 class="callout-title">Our Mission</h1>
   <div class="callout-copy">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+      Spark Social Impact is a centralized platform to spark interest in student leaders & young professionals about careers in the social impact space. Our tool highlights opportunities & organizations contributing to a common goal, focusing on opportunities available in the Bay Area (California). After university, the common mentality of students often revolves around the choice of pursuing a corporate career, achieving “financial success”, & then turning to philanthropy to drive change OR pursuing a career in the nonprofit world & sacrificing financial means. We seek to introduce a third option: pursuing a career that optimizes technology, entrepreneurship, & unique structural models to create lasting impact through a less-traditional route.
     </p>
   </div>
 </div>
 
 <div class="home-section">
-  <h2>SOCIAL ENTERPRISE SPECTRUM</h2>
+  <h2>SOCIAL IMPACT SPECTRUM</h2>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Our categories for organizations in the social impact space
   </p>
+  <a href="/spectrum"><button type="button" class="home-button">Explore the Spectrum</button></a>
   <div class="bio-wrapper">
-    <div class="bio-box">
-      <img src="http://placekitten.com/g/400/400">
-      <h3>Lorem</h3>
-      <!-- <a href="http://twitter.com/mhartl" class="social-link">
-        Tw
-      </a> -->
-      <div class="bio-copy">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+    <a href="/nonprofit">
+      <div class="bio-box spectrum-box">
+        <img src="/images/non_profit.jpg">
+        <h3>Non-Profits</h3>
       </div>
-    </div>
-    <div class="bio-box">
-      <img src="http://placekitten.com/g/400/400">
-      <h3>Ipsum</h3>
-      <!-- <a href="https://twitter.com/leedonahoe" class="social-link">
-        Tw
-      </a> -->
-      <div class="bio-copy">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+    </a>
+    <a href="/socialimpact">
+      <div class="bio-box spectrum-box">
+        <img src="/images/social_impact.jpg">
+        <h3>Social Impact</h3>
       </div>
-    </div>
-    <div class="bio-box">
-      <img src="http://placekitten.com/g/400/400">
-      <h3>Dolor</h3>
-      <!-- <a href="https://twitter.com/nickmerwin" class="social-link">
-        Tw
-      </a> -->
-      <div class="bio-copy">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+    </a>
+    <a href="/forprofit">
+      <div class="bio-box spectrum-box">
+        <img src="/images/for_profit.jpg">
+        <h3>For-Profits</h3>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 
@@ -110,8 +87,8 @@
     <ul class="footer-nav nav-links">
       <li><a href="/">Home</a></li>
 <li><a href="/spectrum">The Spectrum</a></li>
-<li><a href="">About Us</a></li>
-<li><a href="">Contact</a></li>
+<li><a href="/learnmore">Learn More</a></li>
+<li><a href="/about">About Us</a></li>
 
     </ul>
   </nav>

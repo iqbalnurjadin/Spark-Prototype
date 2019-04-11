@@ -6,6 +6,13 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/gallery.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      setNone();
+      activateGallery();
+    });
+  </script>
 </head>
 
   <body>
@@ -14,8 +21,8 @@
     <ul class="header-nav nav-links">
       <li><a href="/">Home</a></li>
 <li><a href="/spectrum">The Spectrum</a></li>
-<li><a href="">About Us</a></li>
-<li><a href="">Contact</a></li>
+<li><a href="/learnmore">Learn More</a></li>
+<li><a href="/about">About Us</a></li>
 
     </ul>
   </nav>
@@ -26,16 +33,48 @@
 
 
     <div class="content-container">
-      <h1 class=diagram-title>THE SOCIAL IMPACT SPECTRUM</h1>
-<div class=spectrum-diagram>
-  <div class="col col-one">
-    Lorem
+      <h1 class="diagram-title">THE SOCIAL IMPACT SPECTRUM</h1>
+<div class="spectrum-page">
+  <img src="/images/arrow.png" class="spectrum-image">
+  <div class="spectrum-diagram">
+    <button onclick="nonprofitFunc()" class="home-button">NON-PROFIT</button>
+    <button onclick="socialimpactFunc()" class="home-button">SOCIAL IMPACT</button>
+    <button onclick="forprofitFunc()" class="home-button">FOR-PROFIT</button>
   </div>
-  <div class="col col-two">
-    Ipsum
+  <div class="to-hide nonprofit" id="nonprofit">
+    <p>
+      As there are countless nonprofits in the Bay Area, we highlight several innovative nonprofits that pursue a wide array of social mission ranging from international development, civic governance, to education. These nonprofits adopts unique models and approaches as they integrate technology, business, and social impact.
+    </p>
   </div>
-  <div class="col col-three">
-    Dolor
+  <div class="to-hide socialimpact" id="socialimpact">
+    <p>
+      Social impact organizations are impact-first organizations that encompasses social impact consulting firms, social enterprises, and ecosystem builders including impact investors. For more information on each category, click here.
+    </p>
+  </div>
+  <div class="to-hide forprofit" id="forprofit">
+    <p>
+      We identify key companies in the private sector known for its great corporate social responsibility and sustainability practices. These companies integrate a social mission into their business models and lead the way in the creation of shared values.
+    </p>
+  </div>
+  <div class="bio-wrapper">
+    <a href="/nonprofit">
+      <div class="bio-box spectrum-box">
+        <img src="/images/non_profit.jpg">
+        <h3>Non-Profits</h3>
+      </div>
+    </a>
+    <a href="/socialimpact">
+      <div class="bio-box spectrum-box">
+        <img src="/images/social_impact.jpg">
+        <h3>Social Impact</h3>
+      </div>
+    </a>
+    <a href="/forprofit">
+      <div class="bio-box spectrum-box">
+        <img src="/images/for_profit.jpg">
+        <h3>For-Profits</h3>
+      </div>
+    </a>
   </div>
 </div>
 
@@ -49,8 +88,8 @@
     <ul class="footer-nav nav-links">
       <li><a href="/">Home</a></li>
 <li><a href="/spectrum">The Spectrum</a></li>
-<li><a href="">About Us</a></li>
-<li><a href="">Contact</a></li>
+<li><a href="/learnmore">Learn More</a></li>
+<li><a href="/about">About Us</a></li>
 
     </ul>
   </nav>

@@ -238,15 +238,27 @@ h2 ~ p {
   display: inline-block;
   margin: 0 0.5em;
 }
+.social-link:hover {
+  background-color: #787896;
+}
 
 /* HOMEPAGE STYLES */
 .home-section {
+  display: flex;
+  flex-direction: column;
   margin: 1rem auto;
   max-width: 980px;
   width: 90vw;
 }
 .home-section h2 {
-  margin-bottom: 1.5rem;
+  color: #787896;
+  text-align: center;
+}
+.home-section p {
+  color: #787896;
+  padding-bottom: 1em;
+}
+.home-section a {
   text-align: center;
 }
 .home-callout {
@@ -255,6 +267,23 @@ h2 ~ p {
   background-color: #fff;
   color: #787896;
   padding: 7vh 0;
+}
+.home-button {
+  flex: 1;
+  background-color: #a5b2c6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.5);
+  transition: all 0.3s cubic-bezier(.5,.8,.5,1);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.home-button:hover {
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5), 0 1px 1px rgba(0,0,0,0.22);
+  background-color: #787896;
 }
 .callout-title {
   flex-grow: 1;
@@ -270,11 +299,70 @@ h2 ~ p {
   font-size: 0.8rem;
 }
 
-/* SPECTRUM STYLES */
-.spectrum-diagram {
+/* COLUMN STYLES */
+.three-col {
+  display: flex;
+}
+.col {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 2em;
+  text-align: center;
+}
+.three-col .col ~ .col {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.three-col .col-nav {
+  flex: 0 1 15em;
+}
+.three-col .col-content {
+  flex: 1;
+}
+.three-col .col-aside {
+  flex: 0 1 20em;
+}
+
+/* ABOUT STYLES */
+.about-sub {
+  text-align: center;
+}
+.about-section {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
+.about-subtitle {
+  padding-top: 0.75em;
+}
+.about-paragraph {
+  padding-bottom: 1em;
+}
+.about-photo {
+  max-width: 75%;
+  padding-bottom: 2em;
+}
+.contact-info {
+  padding: 1em;
+}
+.conference-gallery-title {
+  text-align: center;
+  padding-top: 1em;
+}
+.social-contact {
+  padding: 1em;
+}
+.team-bios {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem auto;
+  max-width: 980px;
+  width: 90vw;
+}
+.team-box {
+  padding: 2em;
+}
+
+/* SPECTRUM STYLES */
 .diagram-title {
   flex-grow: 1;
   flex-basis: 0;
@@ -284,14 +372,107 @@ h2 ~ p {
   text-align: center;
   text-transform: uppercase;
 }
-.col {
+.spectrum-page {
+  display: flex;
+  flex-direction: column;
+}
+.spectrum-diagram {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.spectrum-image {
+  max-width: 100%;
+}
+.spectrum-col {
+  padding: 0 4em;
+  overflow: hidden;
+  transition: flex 0.3s ease-out; // note that we're transitioning flex, not height!
+  height: auto;
   flex: 1;
-  box-sizing: border-box;
-  padding: 2em;
-  text-align: center;
+}
+.spectrum-col .collapsed {
+  flex: 0;
+}
+.spectrum-paragraph {
+  padding-bottom: 1em;
 }
 .col-two, .col-three {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* GALLERY STYLES */
+.gallery-thumbs {
+  height: 90vh;
+  overflow: scroll;
+}
+.gallery-thumbs > div {
+  cursor: pointer;
+}
+.gallery-thumbs img {
+  box-sizing: border-box;
+  box-shadow: 0 0 0 5px transparent;
+  display: inline-block;
+  margin: 0 0 10px;
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+}
+.gallery-thumbs img:hover {
+  opacity: 1;
+}
+.gallery-thumbs .current img {
+  box-shadow: 0 0 0 5px #787896;
+  opacity: 1;
+}
+.gallery-photo {
+  position: relative;
+}
+.gallery-photo img {
+  width: 100%;
+}
+.gallery-info {
+  font-size: 0.8rem;
+}
+.gallery-info h3 {
+  margin-bottom: 1em;
+}
+.gal-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1em;
+}
+.gallery-button {
+  flex: 1;
+  background-color: #a5b2c6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.5);
+  transition: all 0.3s cubic-bezier(.5,.8,.5,1);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.gallery-button:hover {
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5), 0 1px 1px rgba(0,0,0,0.22);
+  background-color: #787896;
+}
+.social-filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.social-filter a {
+  padding: 0 1em 4em 1em;
+  color: #a5b2c6;
+}
+.social-filter .main-social-page {
+  color: #787896;
 }
 
 /* BIO STYLES */
@@ -302,27 +483,32 @@ h2 ~ p {
   overflow: hidden;
 }
 .bio-box {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  box-sizing: border-box;
+  background-color: #a5b2c6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.5);
+  transition: all 0.3s cubic-bezier(.5,.8,.5,1);
   float: left;
   font-size: 1rem;
-  margin: 6rem 0 0;
-  padding: 0 3%;
+  margin: 2rem 0.1rem 0 0.1rem;
   width: 33%;
 }
-.bio-box:hover {
-  box-shadow: 0 28px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+.spectrum-box:hover {
+  box-shadow: 0 28px 28px rgba(0,0,0,0.5), 0 10px 10px rgba(0,0,0,0.22);
+  background-color: #787896;
 }
 .bio-box h3 {
   color: #fff;
   font-size: 1.5em;
-  margin: -40px 0 1em;
+  /* margin: -40px 0 1em; */
   text-align: center;
   text-transform: uppercase;
 }
+.bio-box p {
+  color: white;
+  font-size: 0.85rem;
+}
 .bio-box img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 .bio-box .social-link {
   display: block;
@@ -333,4 +519,69 @@ h2 ~ p {
 }
 .bio-copy a {
   color: green;
+}
+
+/* TEST STYLES */
+.tester-div {
+  display: flex;
+}
+.container {
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  height:600px; // sadly, we're required to set at least the container height explicitly
+}
+.section {
+  overflow:hidden;
+  transition:flex 0.3s ease-out; // note that we're transitioning flex, not height!
+  height:auto;
+  flex:1;
+}
+.section.collapsed {
+  flex: 0;
+}
+/* * {
+  box-sizing:border-box;
+}
+body {
+  margin:0;
+  padding:10vh 10vw;
+  font-family:arial;
+}
+p {
+  margin:10px;
+} */
+.container {
+  border: 3px solid #FFEB3B;
+  margin:0 auto;
+  max-width:300px;
+  border-radius:3px;
+
+  .section {
+    border:3px solid #4CAF50;
+  }
+}
+.test-button {
+  display:block;
+  --webkit-appearance:none;
+  font-size:18px;
+  border:none;
+  border-radius:3px;
+  background:#2196F3;
+  color:white;
+  margin:15px auto;
+  padding:15px;
+  cursor:pointer;
+
+  transition:box-shadow 0.2s ease-out;
+
+  &:hover {
+    box-shadow:0px 0px 15px lightgrey;
+  }
+  &:active {
+    box-shadow:0px 0px 10px lightgrey;
+  }
+  &:focus {
+    outline:none;
+  }
 }
